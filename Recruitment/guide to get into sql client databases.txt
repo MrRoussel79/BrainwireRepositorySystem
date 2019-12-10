@@ -1,0 +1,70 @@
+How to get into databases, and use applicants to add new data in MySQL command client.
+Which is then called in python to run queries.
+
+
+mysql> SHOW DATABASES;
++--------------------+
+| Database           |
++--------------------+
+| applicants         |
+| information_schema |
+| mysql              |
+| performance_schema |
+| sys                |
+| test               |
++--------------------+
+6 rows in set (0.77 sec)
+
+mysql> USE applicants;
+Database changed
+mysql> SHOW TABLES;
++----------------------+
+| Tables_in_applicants |
++----------------------+
+| applicants           |
++----------------------+
+1 row in set (0.39 sec)
+
+
+///////////////////////////////////////////////////////////////////////
+How to call from python
+////////////////////////////////////
+import mysql.connector
+
+            
+mysql = mysql.connector.connect(host="localhost",
+                               database="applicants",
+                               user="root",
+                               password="Sairas970906")
+
+
+cursor=mysql.cursor()
+
+            
+            
+#def DisplayUsers():
+ #   conn = connect()
+  #  cursor = conn.cursor()
+   # cursor.execute("SELECT * FROM users")
+    
+  #  cursor.execute()
+    
+   # rows = cursor.fetchall()
+    
+    #for row in rows:
+     #   print (row)
+     
+
+#cursor.execute("SELECT * FROM applicants")
+cursor.execute("SELECT name, City FROM applicants")
+
+
+### Query to fetch only one row ####
+##cursor.execute("SELECT * FROM applicant")
+##result = cursor.fetchone()
+##print(result)
+
+for p in cursor:
+    print (p)
+
+    
