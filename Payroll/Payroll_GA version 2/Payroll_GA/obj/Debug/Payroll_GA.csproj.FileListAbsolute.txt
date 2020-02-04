@@ -1,0 +1,23 @@
+c:\users\17060982\source\repos\Payroll_GA\Payroll_GA\bin\Debug\Payroll_GA.exe.config
+c:\users\17060982\source\repos\Payroll_GA\Payroll_GA\bin\Debug\Payroll_GA.exe
+c:\users\17060982\source\repos\Payroll_GA\Payroll_GA\bin\Debug\Payroll_GA.pdb
+c:\users\17060982\source\repos\Payroll_GA\Payroll_GA\obj\Debug\Payroll_GA.csprojAssemblyReference.cache
+c:\users\17060982\source\repos\Payroll_GA\Payroll_GA\obj\Debug\Payroll_GA.Form1.resources
+c:\users\17060982\source\repos\Payroll_GA\Payroll_GA\obj\Debug\Payroll_GA.Properties.Resources.resources
+c:\users\17060982\source\repos\Payroll_GA\Payroll_GA\obj\Debug\Payroll_GA.csproj.GenerateResource.cache
+c:\users\17060982\source\repos\Payroll_GA\Payroll_GA\obj\Debug\Payroll_GA.csproj.CoreCompileInputs.cache
+c:\users\17060982\source\repos\Payroll_GA\Payroll_GA\obj\Debug\Payroll_GA.exe
+c:\users\17060982\source\repos\Payroll_GA\Payroll_GA\obj\Debug\Payroll_GA.pdb
+c:\users\17060982\source\repos\Payroll_GA\Payroll_GA\obj\Debug\Payroll_GA.Form2.resources
+D:\Payroll_GA version 1\Payroll_GA\bin\Debug\Payroll_GA.exe.config
+D:\Payroll_GA version 1\Payroll_GA\obj\Debug\Payroll_GA.exe
+D:\Payroll_GA version 1\Payroll_GA\obj\Debug\Payroll_GA.pdb
+D:\Payroll_GA version 1\Payroll_GA\obj\Debug\Payroll_GA.csprojAssemblyReference.cache
+D:\Payroll_GA version 1\Payroll_GA\obj\Debug\Payroll_GA.Form1.resources
+D:\Payroll_GA version 1\Payroll_GA\obj\Debug\Payroll_GA.Form2.resources
+D:\Payroll_GA version 1\Payroll_GA\obj\Debug\Payroll_GA.Form3.resources
+D:\Payroll_GA version 1\Payroll_GA\obj\Debug\Payroll_GA.Properties.Resources.resources
+D:\Payroll_GA version 1\Payroll_GA\obj\Debug\Payroll_GA.csproj.GenerateResource.cache
+D:\Payroll_GA version 1\Payroll_GA\obj\Debug\Payroll_GA.csproj.CoreCompileInputs.cache
+D:\Payroll_GA version 1\Payroll_GA\bin\Debug\Payroll_GA.exe
+D:\Payroll_GA version 1\Payroll_GA\bin\Debug\Payroll_GA.pdb
