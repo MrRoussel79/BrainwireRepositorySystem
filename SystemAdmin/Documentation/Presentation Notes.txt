@@ -1,0 +1,81 @@
+PowerPoint notes:  
+
+Have google docs questionnaire at the end 
+
+Questionnaire:  
+
+Rate PowerPoint 1 to 5 
+
+Rate student delivery 1 to 5 
+
+Rate topics covered 1 to 5 
+
+Do you think we are doing enough in class? 
+
+ 
+
+Need an interesting hook to get people interested like the Algorithms. GitHub is about teamwork, so relate it to teamwork.    
+
+ 
+
+Ideas for interesting hook: Two generals' problem? Could still be an issue today if people aren’t communicating or working together.  
+
+ 
+
+Slides:    
+
+Welcome/Introduction   
+
+ 
+
+What Is GitHub   
+
+Explanation 
+
+Where to learn more 
+
+Interesting features 
+
+GitHub student pack 
+
+ 
+
+What Is Git?  
+
+Explanation 
+
+Why git is useful 
+
+How to learn git 
+
+ 
+
+GitHub integration with PyCharm 
+
+How to 
+
+Why it’s useful 
+
+ 
+
+What teams are using GitHub well and what teams are doing poorly 
+
+Include screenshots 
+
+ 
+
+Thank you for listening 
+
+Questions feel free to use this form 
+
+Or ask here 
+
+ 
+
+  
+
+ 
+
+ 
+
+ 

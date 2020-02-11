@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<!-- saved from url=(0052)https://getbootstrap.com/docs/4.3/examples/checkout/ -->
+<html lang="en">
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="Mark Otto, Jacob Thornton, and Bootstrap contributors">
+    <meta name="generator" content="Jekyll v3.8.5">
+    <title>All Tickets</title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+
+
+    <style>
+        .bd-placeholder-img {
+            font-size: 1.125rem;
+            text-anchor: middle;
+            -webkit-user-select: none;
+            -moz-user-select: none;
+            -ms-user-select: none;
+            user-select: none;
+        }
+
+        @media (min-width: 768px) {
+            .bd-placeholder-img-lg {
+                font-size: 3.5rem;
+            }
+        }
+
+    </style>
+    <!-- Custom styles for this template -->
+    <link href="./css/form-validation.css" rel="stylesheet">
+</head>
+
+<body class="bg-light" cz-shortcut-listen="true">
+
+    <nav class="navbar navbar-expand-lg navbar-light bg-info">
+        <a class="navbar-brand" href="index.html">MyCompany Tickets Submission</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav mr-auto">
+                <li class="nav-item active">
+                    <a class="nav-link" href="allTickets.html">My tickets</a>
+                </li>
+            </ul>
+            <form class="form-inline my-2 my-lg-0">
+                <button class="btn btn-outline-light my-2 my-sm-0" type="submit">LogOut</button>
+            </form>
+        </div>
+    </nav>
+
+    <div class="container">
+        <div class="py-5 text-center">
+            <img class="d-block mx-auto mb-4" src="./img/bootstrap-solid.svg" alt="" width="72" height="72">
+            <h2>Tickets Reports</h2>
+            <p class="lead">Below is an example form built entirely with Bootstrap’s form controls. Each required form group has a validation state that can be triggered by attempting to submit the form without completing it.</p>
+        </div>
+
+        <div class="row">
+            <div class="col-md-2 order-md-2 mb-4">
+                <h5 class="d-flex justify-content-between align-items-center mb-3">
+                    Need to report an issue ?
+                </h5>
+                <a href="addTickets.html" class="btn btn-primary" style="background-color: #563D7C; border-color:#563D7C; color: white;">Add a Ticket</a>
+            </div>
+
+            <div class="col-md-10 order-md-1">
+                <h4 class="mb-3">My Tickets</h4>
+<!--                Switch to filter Done or in progress-->
+<!--
+                <div class="custom-control custom-switch">
+                  <input type="checkbox" class="custom-control-input" id="customSwitch1">
+                  <label class="custom-control-label" for="customSwitch1">Toggle this switch element to filter by done or in progress</label>
+                </div>
+-->
+                <div class="card-columns" id="list-cards">
+
+                    <div class="card">
+                        <div class="card-header">
+                            29/10/2019 - Software Issue
+                            <span class="badge badge-primary badge-pill" style="background-color: #ff9800; border-color: #ff9800">In progress</span>
+                        </div>
+                        <div class="card-body">
+                            <h5 class="card-title">Problem when I login</h5>
+                            <p class="card-text text-truncate">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                            <button class="read_more" style="color: mediumblue; text-decoration: underline; border: 0; background-color: transparent;">Read more ...</button>
+                        </div>
+                        <div class="card-footer text-muted">
+                            <button style="width: 100%; display: none" class="btn btn-success mt-2">Switch to Done</button>
+                        </div>
+                    </div>
+
+
+                    <div class="card">
+                        <div class="card-header">
+                            29/10/2019 - Software Issue
+                            <span class="badge badge-primary badge-pill" style="background-color: #ff9800; border-color: #ff9800">In progress</span>
+                        </div>
+                        <div class="card-body">
+
+                            <h5 class="card-title">Problem when I login</h5>
+                            <p class="card-text text-truncate">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                            <button class="read_more" style="color: mediumblue; text-decoration: underline; border: 0; background-color: transparent">Read more ...</button>
+                        </div>
+                        <div class="card-footer text-muted">
+                            <button style="width: 100%; display: none" class="btn btn-success mt-2">Switch to Done</button>
+                        </div>
+                    </div>
+
+                    <div class="card">
+                        <div class="card-header">
+                            29/10/2019 - Software Issue
+                            <span class="badge badge-primary badge-pill" style="background-color: #ff9800; border-color: #ff9800">In progress</span>
+                        </div>
+                        <div class="card-body">
+                            <h5 class="card-title">Problem when I login</h5>
+                            <p class="card-text text-truncate">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                            <button class="read_more" style="color: mediumblue; text-decoration: underline; border: 0; background-color: transparent">Read more ...</button>
+                        </div>
+                        <div class="card-footer text-muted">
+                            <button style="width: 100%; display: none" class="btn btn-success mt-2">Switch to Done</button>
+                        </div>
+                    </div>
+
+                    <div class="card">
+                        <div class="card-header">
+                            29/10/2019 - Software Issue
+                            <span class="badge badge-primary badge-pill" style="background-color: #ff9800; border-color: #ff9800">In progress</span>
+                        </div>
+                        <div class="card-body">
+                            <h5 class="card-title">Problem when I login</h5>
+                            <p class="card-text text-truncate">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                            <button class="read_more" style="color: mediumblue; text-decoration: underline; border: 0; background-color: transparent">Read more ...</button>
+                        </div>
+                        <div class="card-footer text-muted">
+                            <button style="width: 100%; display: none" class="btn btn-success mt-2">Switch to Done</button>
+                        </div>
+                    </div>
+
+                    <div class="card">
+                        <div class="card-header">
+                            29/10/2019 - Software Issue
+                            <span class="badge badge-primary badge-pill" style="background-color: #ff9800; border-color: #ff9800">In progress</span>
+                        </div>
+                        <div class="card-body">
+                            <h5 class="card-title">Problem when I login</h5>
+                            <p class="card-text text-truncate">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                            <button class="read_more" style="color: mediumblue; text-decoration: underline; border: 0; background-color: transparent">Read more ...</button>
+                        </div>
+                        <div class="card-footer text-muted">
+                            <button style="width: 100%; display: none" class="btn btn-success mt-2">Switch to Done</button>
+                        </div>
+                    </div>
+
+                    <div class="card">
+                        <div class="card-header">
+                            29/10/2019 - Software Issue
+                            <span class="badge badge-primary badge-pill" style="background-color: #41c400; border-color: #41c400">Resolve</span>
+                        </div>
+                        <div class="card-body">
+                            <h5 class="card-title">Problem when I login</h5>
+                            <p class="card-text text-truncate">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                            <button class="read_more" style="color: mediumblue; text-decoration: underline; border: 0; background-color: transparent">Read more ...</button>
+                        </div>
+                        <div class="card-footer text-muted">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <footer class="my-5 pt-5 text-muted text-center text-small">
+            <p class="mb-1">© 2017-2019 Company Name</p>
+            <ul class="list-inline">
+                <li class="list-inline-item"><a href="https://getbootstrap.com/docs/4.3/examples/checkout/#">Privacy</a></li>
+                <li class="list-inline-item"><a href="https://getbootstrap.com/docs/4.3/examples/checkout/#">Terms</a></li>
+                <li class="list-inline-item"><a href="https://getbootstrap.com/docs/4.3/examples/checkout/#">Support</a></li>
+            </ul>
+        </footer>
+    </div>
+
+    <script src="./js/jquery-3.4.1.js"></script>
+
+    <!--<script>window.jQuery || document.write('<script src="/docs/4.3/assets/js/vendor/jquery-slim.min.js"><\/script>')</script>-->
+    <script src="./js/bootstrap.bundle.min.js" integrity="sha384-xrRywqdh3PHs8keKZN+8zzc5TX0GRTLCcmivcbNJWm2rs5C8PRhcEn3czEjhAO9o" crossorigin="anonymous"></script>
+
+    <script src="./js/form-validation.js"></script>
+
+    <script>
+        //Filter by done or in progress
+        $(document).ready(function(){
+          $("#myInput").on("keyup", function() {
+            var value = $(this).val().toLowerCase();
+              console.log(value);
+            $("#list-cards .card").filter(function() {
+              $(this).toggle($(this).text().toLowerCase().indexOf(value) > -1)
+            });
+          });
+        });
+        
+        
+        $('.read_more').on('click', function(link_button) {
+            //I search the element clicked and find the text to expand
+
+            //Text
+            var text = link_button.target.previousElementSibling;
+            //Button Switch to done
+            try{
+              var button_admin=link_button.target.parentElement.nextElementSibling.firstElementChild;
+            }catch{
+                
+            }
+            
+            //switch class & name
+            if (text.className == "card-text text-truncate") {
+                if(button_admin!=null){
+                    button_admin.style.display="block"
+                }
+                link_button.target.textContent = "Less ..."
+                text.className = "card-text";
+            } else {
+                if(button_admin!=null){
+                    button_admin.style.display="none";
+                }
+                text.className = "card-text text-truncate";           
+                link_button.target.textContent = "Read more..."
+
+            }
+
+        });
+
+    </script>
+
+</body>
+
+</html>
