@@ -1,0 +1,380 @@
+from tkinter import *
+import os
+
+root=Tk
+
+def register():
+    global register_screen
+    register_screen = Toplevel(main_screen)
+    register_screen.config(background="#ffcc99")
+    register_screen.title("Register")
+    register_screen.geometry("600x300")
+
+    global username
+    global password
+    global username_entry
+    global password_entry
+    username = StringVar()
+    password = StringVar()
+
+    Label(register_screen, text="Please enter details below", font=("arial nova light",18) ,bg="#e0e0e0").pack()
+    Label(register_screen, text="",bg="#ffcc99").pack()
+    username_lable = Label(register_screen, text="Username * ",font=("arial nova light",12) ,bg="#e0e0e0")
+    username_lable.pack()
+    username_entry = Entry(register_screen ,textvariable=username)
+    username_entry.pack()
+    password_lable = Label(register_screen, text="Password * ",font=("arial nova light",12) ,bg="#e0e0e0")
+    password_lable.pack()
+    password_entry = Entry(register_screen, textvariable=password, show='*')
+    password_entry.pack()
+    Label(register_screen, text="",bg="#ffcc99").pack()
+    Button(register_screen, text="Register", width=10, height=1, bg="#c0c0c0" ,font=("arial nova light",14), command=register_user).pack()
+    Label(register_screen,text="",bg="#ffcc99").pack()
+    Button(register_screen,text="Login", width=10,height=1,bg="#c0c0c0",font=("arial nova light",14),command=login).pack()
+
+
+
+def login():
+    global login_screen
+    login_screen = Toplevel(main_screen)
+    login_screen.title("Login")
+    login_screen.geometry("600x300")
+    login_screen.config(background="#ffcc99")
+    Label(login_screen, text="Assets Tracking/Disciplinary Action Tracking Services", font=("arial nova light",18) ,bg="#e0e0e0").pack()
+    Label(login_screen, text="",bg="#ffcc99").pack()
+
+    global username_verify
+    global password_verify
+
+    username_verify = StringVar()
+    password_verify = StringVar()
+
+    global username_login_entry
+    global password_login_entry
+
+    Label(login_screen, text="Username * ",font=("arial nova light",12) ,bg="#e0e0e0").pack()
+    username_login_entry = Entry(login_screen, textvariable=username_verify)
+    username_login_entry.pack()
+    Label(login_screen, text="",bg="#ffcc99").pack()
+    Label(login_screen, text="Password * ",font=("arial nova light",12) ,bg="#e0e0e0").pack()
+    password_login_entry = Entry(login_screen, textvariable=password_verify,show='*')
+    password_login_entry.pack()
+    Label(login_screen, text="",bg="#ffcc99").pack()
+    Button(login_screen, text="Login", width=10, height=1, bg="#c0c0c0" ,font=("arial nova light",14),command=login_verify).pack()
+
+def RegisterEmployeeForAssetTracking():
+    global RegisterEmployee_screen
+    RegisterEmployee_screen=Toplevel(main_screen)
+    RegisterEmployee_screen.title("Register Employee")
+    RegisterEmployee_screen.config(background="#ffcc99")
+    RegisterEmployee_screen.geometry("500x400")
+
+    global employeeNumber
+    global employeeName
+    global employeeAsset
+
+    global employeeNumber_entry
+    global employeeName_entry
+    global employeeAsset_entry
+
+    employeeNumber = StringVar()
+    employeeName = StringVar()
+    employeeAsset = StringVar()
+
+    Label(RegisterEmployee_screen, text="Please enter Employee details below", font=("arial nova light",18) ,bg="#e0e0e0").pack()
+    Label(RegisterEmployee_screen, text="", bg="#ffcc99").pack()
+    employeeNumber_lable = Label(RegisterEmployee_screen, text="Employee Number * ", font=("arial nova light",12) ,bg="#e0e0e0")
+    employeeNumber_lable.pack()
+    employeeNumber_entry = Entry(RegisterEmployee_screen, textvariable=employeeNumber)
+    employeeNumber_entry.pack()
+    employeeName_lable=Label(RegisterEmployee_screen, text="Employee Name *",font=("arial nova light",12) ,bg="#e0e0e0")
+    employeeName_lable.pack()
+    employeeName_entry=Entry(RegisterEmployee_screen, textvariable=employeeName)
+    employeeName_entry.pack()
+    employeeAsset_lable=Label(RegisterEmployee_screen, text="Employee Asset *" ,font=("arial nova light",12) ,bg="#e0e0e0")
+    employeeAsset_lable.pack()
+    employeeAsset_entry=Entry(RegisterEmployee_screen, textvariable=employeeAsset)
+    employeeAsset_entry.pack()
+    Label(RegisterEmployee_screen, text="", bg="#ffcc99").pack()
+    Button(RegisterEmployee_screen, text="Register Employee", width=20,height=1,bg="#c0c0c0" ,font=("arial nova light",14),command=register_Employee).pack()
+    Button(RegisterEmployee_screen, text="Back", font=("arial nova ligh", 14), bg="#c0c0c0",command=select_service).pack()
+
+def RegisterEmployeeDisciplinaryActionTracking():
+    global RegisterEmployeeDisciplinaryActionTracking_screen
+    RegisterEmployeeDisciplinaryActionTracking_screen=Toplevel(main_screen)
+    RegisterEmployeeDisciplinaryActionTracking_screen.title("Register Employee")
+    RegisterEmployeeDisciplinaryActionTracking_screen.config(background="#ffcc99")
+    RegisterEmployeeDisciplinaryActionTracking_screen.geometry("500x400")
+
+    global employeeNumberDA
+    global employeeNameDA
+    global employeeDA
+
+    global employeeNumberDA_entry
+    global employeeNameDA_entry
+    global employeeDA_entry
+
+    employeeNumberDA=StringVar()
+    employeeNameDA=StringVar()
+    employeeDA=StringVar()
+
+    Label(RegisterEmployeeDisciplinaryActionTracking_screen, text="Please enter Employee details below", font=("arial nova light",18) ,bg="#e0e0e0").pack()
+    Label(RegisterEmployeeDisciplinaryActionTracking_screen, text="", bg="#ffcc99").pack()
+    employeeNumberDA_lable = Label(RegisterEmployeeDisciplinaryActionTracking_screen, text="Employee Number *(Add a DA before the number) ", font=("arial nova light",12) ,bg="#e0e0e0")
+    employeeNumberDA_lable.pack()
+    employeeNumberDA_entry = Entry(RegisterEmployeeDisciplinaryActionTracking_screen, textvariable=employeeNumberDA)
+    employeeNumberDA_entry.pack()
+    employeeNameDA_lable=Label(RegisterEmployeeDisciplinaryActionTracking_screen, text="Employee Name *",font=("arial nova light",12) ,bg="#e0e0e0")
+    employeeNameDA_lable.pack()
+    employeeNameDA_entry=Entry(RegisterEmployeeDisciplinaryActionTracking_screen, textvariable=employeeNameDA)
+    employeeNameDA_entry.pack()
+    employeeDA_lable=Label(RegisterEmployeeDisciplinaryActionTracking_screen, text="Employee's Disciplinary Actions *",font=("arial nova light",12) ,bg="#e0e0e0")
+    employeeDA_lable.pack()
+    employeeDA_entry=Entry(RegisterEmployeeDisciplinaryActionTracking_screen, textvariable=employeeDA)
+    employeeDA_entry.pack()
+    Label(RegisterEmployeeDisciplinaryActionTracking_screen, text="", bg="#ffcc99").pack()
+    Button(RegisterEmployeeDisciplinaryActionTracking_screen, text="Register Employee", width=20,height=1,bg="#c0c0c0" ,font=("arial nova light",14),command=register_EmployeeDA).pack()
+    Button(RegisterEmployeeDisciplinaryActionTracking_screen, text="Back", font=("arial nova ligh", 14), bg="#c0c0c0",command=select_service).pack()
+
+
+def register_user():
+    username_info = username.get()
+    password_info = password.get()
+
+    file = open(username_info, "w")
+    file.write(username_info + "\n")
+    file.write(password_info)
+    file.close()
+
+    username_entry.delete(0, END)
+    password_entry.delete(0, END)
+
+    Label(register_screen, text="Registration Success", font=("arial nova light",12),bg="#e0e0e0").pack()
+
+def register_Employee():
+    Employee_info1=employeeNumber.get()
+    Employee_info2=employeeName.get()
+    Employee_info3=employeeAsset.get()
+
+    file=open(Employee_info1,"w")
+    file.write(Employee_info1 + "\n")
+    file.write(Employee_info2 + "\n")
+    file.write(Employee_info3)
+    file.close()
+
+    employeeNumber_entry.delete(0, END)
+    employeeName_entry.delete(0,END)
+    employeeAsset_entry.delete(0,END)
+
+    Label(RegisterEmployee_screen, text="Employee Registered",font=("arial nova light",18) ,bg="#e0e0e0").pack()
+
+
+def register_EmployeeDA():
+    EmployeeDA_info1=employeeNumberDA.get()
+    EmployeeDA_info2=employeeNameDA.get()
+    EmployeeDA_info3=employeeDA.get()
+
+    file=open(EmployeeDA_info1,"w")
+    file.write(EmployeeDA_info1 + "\n")
+    file.write(EmployeeDA_info2 + "\n")
+    file.write(EmployeeDA_info3)
+    file.close()
+
+    employeeNumberDA_entry.delete(0, END)
+    employeeNameDA_entry.delete(0, END)
+    employeeDA_entry.delete(0, END)
+
+    Label(RegisterEmployeeDisciplinaryActionTracking_screen, text="Employee Registered",font=("arial nova light",18) ,bg="#e0e0e0").pack()
+
+def login_verify():
+    username1 = username_verify.get()
+    password1 = password_verify.get()
+    username_login_entry.delete(0, END)
+    password_login_entry.delete(0, END)
+
+    list_of_files = os.listdir()
+    if username1 in list_of_files:
+        file1 = open(username1, "r")
+        verify = file1.read().splitlines()
+        if password1 in verify:
+            login_success()
+        else:
+            password_not_recognised()
+    else:
+        user_not_found()
+
+def Search_verify():
+    employeeNumber =employeeNumber_verify.get()
+    employeeNumber_entry.delete(0, END)
+
+    list_of_files=os.listdir()
+    if employeeNumber in list_of_files:
+        file1=open(employeeNumber, "r")
+        verify=file1.read().splitlines()
+        if employeeNumber in verify:
+            f=open(employeeNumber,"r")
+            print(f.read())
+            search_success()
+    else:
+            employeeNumber_not_recognised()
+def Search_verifyDA():
+    employeeNumberDA =employeeNumberDA_verify.get()
+    employeeNumberDA_entry.delete(0, END)
+
+    list_of_files=os.listdir()
+    if employeeNumberDA in list_of_files:
+        file1=open(employeeNumberDA, "r")
+        verify=file1.read().splitlines()
+        if employeeNumberDA in verify:
+            search_successDA()
+    else:
+          employeeNumberDA_not_recognised()
+def search_success():
+    Label(Asset_Tracking_screen,text="Employee Data found",font=("arial nova light",18) ,bg="#ffcc99").pack()
+    Button(Asset_Tracking_screen, text="OK", bg="#c0c0c0" ,font=("arial nova light",14),command=Asset_Tracking_Search).pack()
+
+def search_successDA():
+   Label(Disciplinary_Action_Tracking_screen,text="Employee Data found",font=("arial nova light",18) ,bg="#e0e0e0").pack()
+
+   Button(Disciplinary_Action_Tracking_screen, text="OK", bg="#c0c0c0" ,font=("arial nova light",14),command=Disciplinary_Action_Tracking_Search).pack()
+def login_success():
+    Label(login_screen,text="Credentials Correct",font=("arial nova light" ,12), bg="#ffcc99").pack()
+    Button(login_screen, text="OK",bg="#c0c0c0" ,font=("arial nova light",14), command=PolicyDocument).pack()
+
+
+def employeeNumber_not_recognised():
+    Label(Asset_Tracking_screen, text="Employee Data not found", font=("arial nova light", 12), bg="#ffcc99").pack()
+
+
+def employeeNumberDA_not_recognised():
+   Label(Disciplinary_Action_Tracking_screen, text="Employee Data not found",font=("arial nova light",12) ,bg="#ffcc99").pack()
+
+
+def password_not_recognised():
+   Label(login_screen,text="Invalid Password",bg="#ffcc99",font=("arial nova light",12)).pack()
+
+def user_not_found():
+    Label(login_screen, text="Invalid Username", bg="#ffcc99", font=("arial nova light", 12)).pack()
+
+def PolicyDocument():
+    global Policy_Document_Screen
+    Policy_Document_Screen=Toplevel(login_screen)
+    Policy_Document_Screen.title("Policy Document")
+    Policy_Document_Screen.geometry("500x300")
+    Policy_Document_Screen.config(background="#ffcc99")
+    Label(Policy_Document_Screen,text="Policy Document Here", width="300", height="2",font=("arial nova light",18) ,bg="#e0e0e0").pack()
+    Label(text="",bg="#ffcc99").pack()
+    Label(Policy_Document_Screen, text="Do you agree to the above policy?", width="300", height="2",font=("arial nova light",18) ,bg="#e0e0e0").pack()
+    Label(text="",bg="#ffcc99").pack()
+    Button(Policy_Document_Screen,text="YES",height="2",width="10",bg="#c0c0c0" ,font=("arial nova light",14), command=select_service).pack()
+    Button(Policy_Document_Screen,text="NO",height="2",width="10",bg="#c0c0c0" ,font=("arial nova light",14), command=Policy_Doc_Issue).pack()
+
+def Policy_Doc_Issue():
+    Label(Policy_Document_Screen, text="You need to agree to the Policy Document before logging in",font=("arial nova light",12) ,bg="#ffcc99").pack()
+
+
+
+def select_service():
+    select_service_screen=Toplevel(login_screen)
+    select_service_screen.title("Service Selection")
+    select_service_screen.geometry("500x500")
+    select_service_screen.config(background="#ffcc99")
+    Label(select_service_screen,text="Which service do you wish to access?",width="300", height="2",font=("arial nova light",18) ,bg="#e0e0e0").pack()
+    Label(text="",bg="#ffcc99").pack()
+    Button(select_service_screen,text="Asset Tracking", height="2", width="40",bg="#c0c0c0" ,font=("arial nova light",14),command=Asset_Tracking).pack()
+    Label(select_service_screen, text="",bg="#ffcc99").pack()
+    Button(select_service_screen,text="Disciplinary Action Tracking", height="2", width="40",bg="#c0c0c0" ,font=("arial nova light",14),command=Disciplinary_Action_Tracking).pack()
+    Label(select_service_screen, text="", bg="#ffcc99").pack()
+    Button(select_service_screen,text="Register Employee for Asset Tracking", height=2, width="40", bg="#c0c0c0" ,font=("arial nova light",14),command=RegisterEmployeeForAssetTracking).pack()
+    Label(select_service_screen,text="", bg="#ffcc99").pack()
+    Button(select_service_screen,text="Register Employee for Disciplinary Action Tracking", height="2", width="40", bg="#c0c0c0" ,font=("arial nova light",14),command=RegisterEmployeeDisciplinaryActionTracking).pack()
+    Label(select_service_screen,text="",bg="#ffcc99").pack()
+    Button(select_service_screen, text="Logout", height=2, width="40", bg="#c0c0c0" ,font=("arial nova light",14), command=quit).pack()
+
+def Asset_Tracking():
+    global Asset_Tracking_screen
+    Asset_Tracking_screen=Toplevel(login_screen)
+    Asset_Tracking_screen.title("Asset Tracking")
+    Asset_Tracking_screen.geometry("500x400")
+    Asset_Tracking_screen.config(background="#ffcc99")
+    Label(Asset_Tracking_screen, text="Asset Tracking", width="300", height="2",font=("arial nova light",18) ,bg="#e0e0e0").pack()
+    Label(text="",bg="#ffcc99").pack()
+    Label(Asset_Tracking_screen,text="Please input a valid Employee Number",width="300", height="2",font=("arial nova light",18) ,bg="#e0e0e0").pack()
+    Label(text="",bg="#ffcc99").pack
+    global employeeNumber_verify
+
+    employeeNumber_verify = StringVar()
+
+    global employeeNumber_entry
+
+    Label(Asset_Tracking_screen, text="Employee Number * ", font=("arial nova light",18) ,bg="#e0e0e0").pack()
+    employeeNumber_entry= Entry(Asset_Tracking_screen, textvariable=employeeNumber_verify)
+    employeeNumber_entry.pack()
+    Label(Asset_Tracking_screen, text="", bg="#ffcc99").pack()
+    Label(Asset_Tracking_screen, text="", bg="#ffcc99").pack()
+    Button(Asset_Tracking_screen, text="Search",height="2", width="30",bg="#c0c0c0" ,font=("arial nova light",14),command= Search_verify).pack()
+
+def Asset_Tracking_Search():
+    Asset_Tracking_Search_screen=Toplevel(login_screen)
+    Asset_Tracking_Search_screen.title("Result")
+    Asset_Tracking_Search_screen.geometry("500x400")
+    Asset_Tracking_Search_screen.config(background="#ffcc99")
+    Label(Asset_Tracking_Search_screen, text="", width="300", height="2").pack()
+    Label(text="",bg="#ffcc99").pack()
+    Label(Asset_Tracking_Search_screen, text="Would you like to search again?",width="300", height="2",font=("arial nova light",18) ,bg="#e0e0e0").pack()
+    Button(Asset_Tracking_Search_screen, text="YES", height="2", width="30", bg="#c0c0c0" ,font=("arial nova light",14),command=select_service).pack()
+    Button(Asset_Tracking_Search_screen,text="NO", height="2", width="30",bg="#c0c0c0" ,font=("arial nova light",14)).pack()
+
+def Disciplinary_Action_Tracking ():
+    global Disciplinary_Action_Tracking_screen
+    Disciplinary_Action_Tracking_screen=Toplevel(login_screen)
+    Disciplinary_Action_Tracking_screen.title("Disciplinary Action Tracking")
+    Disciplinary_Action_Tracking_screen.geometry("500x400")
+    Disciplinary_Action_Tracking_screen.config(background="#ffcc99")
+    Label(Disciplinary_Action_Tracking_screen, text="Disciplinary Acton Tracking ",width="300", height="2",font=("arial nova light",18) ,bg="#e0e0e0").pack()
+    Label(text="",bg="#ffcc99").pack()
+    Label(Disciplinary_Action_Tracking_screen,text="Please input a valid Employee Number(Add a DA before the number) ",width="300", height="2",font=("arial nova light",12),bg="#e0e0e0").pack()
+    Label(text="",bg="#ffcc99").pack
+    global employeeNumberDA_verify
+
+    employeeNumberDA_verify = StringVar()
+
+    global employeeNumberDA_entry
+
+    Label(Disciplinary_Action_Tracking_screen, text="Employee Number * ", font=("arial nova light",18) ,bg="#e0e0e0").pack()
+    employeeNumberDA_entry = Entry(Disciplinary_Action_Tracking_screen, textvariable=employeeNumberDA_verify)
+    employeeNumberDA_entry.pack()
+    Label(Disciplinary_Action_Tracking_screen, text="", bg="#ffcc99").pack()
+    Label(Disciplinary_Action_Tracking_screen, text="", bg="#ffcc99").pack()
+    Button(Disciplinary_Action_Tracking_screen, text="Search", height="2", width="30", bg="#c0c0c0" ,font=("arial nova light",14),command=Search_verifyDA).pack()
+
+
+
+def Disciplinary_Action_Tracking_Search():
+    Disciplinary_Action_Tracking_Search_screen=Toplevel(login_screen)
+    Disciplinary_Action_Tracking_Search_screen.title("Result")
+    Disciplinary_Action_Tracking_Search_screen.config(background="#ffcc99")
+    Disciplinary_Action_Tracking_Search_screen.geometry("500x300")
+    Label(Disciplinary_Action_Tracking_Search_screen, text="DATA HERE", width="300", height="2").pack()
+    Label(text="",bg="#ffcc99").pack()
+    Label(Disciplinary_Action_Tracking_Search_screen, text="Would you like to search again?",width="300", height="2", font=("arial nova light",18) ,bg="#e0e0e0").pack()
+    Button(Disciplinary_Action_Tracking_Search_screen, text="YES", height="2", width="30",bg="#c0c0c0" ,font=("arial nova light",14) ,command=select_service).pack()
+    Button(Disciplinary_Action_Tracking_Search_screen,text="No", height="2", width="30",bg="#c0c0c0" ,font=("arial nova light",14)).pack()
+
+def main_account_screen():
+    global main_screen
+    main_screen = Tk()
+    main_screen.geometry("500x300")
+    main_screen.config(background="#ffcc99")
+    main_screen.title("Account Login")
+    Label(text="Select an option",width="200", height="2",font=("arial nova light",18) ,bg="#e0e0e0").pack()
+    Label(text="",bg="#ffcc99").pack()
+    Button(text="Login", height="2", width="30", bg="#c0c0c0",font=("arial nova light",14),command=login).pack()
+    Label(text="",bg="#ffcc99").pack()
+    Button(text="Register User", height="2", width="30",bg="#c0c0c0" ,font=("arial nova light",14),command=register).pack()
+    Label(text="",bg="#ffcc99").pack()
+
+
+    main_screen.mainloop()
+
+main_account_screen()
